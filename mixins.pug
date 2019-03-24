@@ -1,0 +1,34 @@
+mixin navMenu(...items)
+  each item in items
+    if item == items[0]
+      li.nav__link.nav__link_active
+        span.nav__link_main= item
+        span.nav__link_hover= item
+    else
+      li.nav__link
+        span.nav__link_main= item
+        span.nav__link_hover= item
+
+mixin workBox(...items)
+  each item in items
+    a(href=""+item[1] target="_blank").work-box
+      .work-box__img_wrap
+        img.work-box__img(src=""+ item[0], alt=""+ item[2])
+        .description(data-name=""+ item[2])
+          span.description__link DESCRIPTION
+      p.work-box__title= item[2]
+
+mixin skills(...items)
+  each item in items
+    .skills-box
+      .skills-box__img_wrap
+        img.skills-box__img(src="img/skill-icons/"+item[0]+".svg", alt=""+item[0])
+      .skills-box__wrap
+        h3.skills-box__title= item[1]
+        P.skills-box__description= item[2]
+
+mixin social-media(...items)
+  each item in items
+    a.social-media__link(href=""+item[0] target="_blank")
+      .social-media__img_wrap
+        img.social-media__img(src="img/contact-icons/"+item[1]+".svg", alt=""+item[1])

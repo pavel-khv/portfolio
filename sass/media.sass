@@ -1,0 +1,478 @@
+$main_size : 16px
+$color_text : #e5e7e9
+$color_highlight : #ffac62
+
+@media screen and (max-width: 1450px)
+  .section
+    max-width: 1200px
+  .work-box
+    &__title
+      font-size: $main_size + 6
+    &__img_wrap
+      width: 170px
+      height: 170px
+    &:before
+      top: -110%
+      left: 5%
+    &:hover
+      &:before
+        top: -85%
+
+@media screen and (max-width: 1280px)
+  .section
+    max-width: 980px
+  .work-box
+    width: 40%
+    &__img_wrap
+      width: 180px
+      height: 180px
+    &:hover
+      &:before
+        top: -80%
+
+@media screen and (max-width: 1024px)
+  .section
+    max-width: 700px
+  .block
+    max-width: 500px
+  .header
+    &__title
+      font-size: $main_size + 2
+      max-width: 250px
+      margin-right: 0
+
+  .brand-logo
+    &__name
+      font-size: $main-size + 24
+      line-height: $main_size + 14
+      font-weight: 300
+      transform: scaleY(0.9)
+    &__subtitle
+      font-size: $main_size + 3
+      letter-spacing: 0.28em
+      font-weight: 100
+      color: #a5a5a5
+      margin-left: 2px
+      transform: scaleY(0.7)
+
+  .nav
+    &__link
+      &_main,
+      &_hover
+        font-size: $main_size
+
+  .work-box
+    width: 40%
+    &__title
+      font-size: $main_size + 2
+    &__img_wrap
+      width: 160px
+      height: 160px
+    &:before
+      top: -120%
+      width: 320px
+    &:hover
+      &:before
+        top: -100%
+
+  .block
+    padding: 30px
+    &__close
+      width: 40px
+      height: 40px
+      line-height: 40px
+      font-size: $main_size + 2
+
+  .description
+    &__link
+      font-size: $main_size - 4
+    &-block
+      &__title
+        font-size: $main_size + 8
+      &__text
+        width: 100%
+        color: #a5a5a5
+        font-size: $main_size - 1
+
+  .technologies
+    display: flex
+    flex-wrap: wrap
+    width: 100%
+    padding: 0
+    &__item
+      font-size: $main_size - 1
+      border: 1px solid $color_highlight
+      margin: 15px 15px 0 0
+      padding: 10px 15px
+
+  .about-me
+    &__first-title
+      font-size: $main_size + 8
+
+  .skills
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    width: 100%
+    &-box 
+      display: flex
+      justify-content: flex-start
+      width: 100%
+      &__img
+        width: 80px
+        opacity: 0.9
+        margin-right: 20px
+      &__title
+        font-size: $main_size + 4
+      &__description
+        font-size: $main_size - 1
+
+  .contacts
+    &__title
+      font-size: $main_size + 8
+
+  .contact-me
+    font-size: $main_size - 1
+    &__link 
+      line-height: $main_size + 6
+  .contact-me__title,
+  .social-media__title
+    font-size: $main_size + 3
+
+  .social-media
+    &__link
+      margin: 10px
+      color: #fff
+      &:nth-child(2)
+        margin-left: 0
+    &__img
+      width: 40px
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) 
+    .brand-logo
+      &__subtitle
+        font-size: $main_size + 3
+        letter-spacing: 0.31em
+
+@media screen and (max-width: 768px)
+  .section
+    max-width: 95%
+  .block
+    max-width: 95%
+  .header
+    &__title
+      font-size: $main_size + 2
+      max-width: 250px
+      margin-right: 0
+
+  .brand-logo
+    &__name
+      font-size: $main-size + 24
+      line-height: $main_size + 14
+      font-weight: 300
+      transform: scaleY(0.9)
+    &__subtitle
+      font-size: $main_size + 3
+      letter-spacing: 0.28em
+      font-weight: 100
+      color: #a5a5a5
+      margin-left: 2px
+      transform: scaleY(0.7)
+
+  .nav
+    &__list
+      border: 1px solid $color_text
+      flex-direction: column
+      align-items: center
+    &__link
+      width: 100%
+      padding: 10px 0
+      text-align: center
+      transition: 0.3s
+      &_main,
+      &_hover
+        font-size: $main_size - 1
+      &_hover
+        display: none
+      &:before
+        display: none
+      &:hover &_main
+        transform: translateY(0)
+        opacity: 1
+        visibility: visible
+      &:hover
+        background: #fff
+        .nav__link
+          &_main
+            color: #000
+
+      &_active
+        background: #fff
+        &:before
+          display: none
+        .nav__link
+          &_hover
+            display: none
+          &_main
+            transform: translateY(0)
+            opacity: 1
+            visibility: visible
+            color: #000
+
+  .work-block
+    max-width: 95% 
+    justify-content: space-between
+  .work-box
+    width: 45%
+    margin: 10px 0
+    min-width: 320px
+    &__title
+      width: 50%
+      font-size: $main_size 
+    &__img_wrap
+      width: 140px
+      height: 140px
+    &:before
+      top: -140%
+      width: 320px
+    &:hover
+      &:before
+        top: -100%
+        
+    
+
+  .block
+    padding: 30px
+    &__close
+      width: 40px
+      height: 40px
+      line-height: 40px
+      font-size: $main_size + 2
+
+  .description
+    opacity: 1
+    background: rgba(0, 0, 0, 0.3)
+    align-items: flex-start
+    &__link
+      font-size: $main_size - 4
+      margin-top: 10%
+    &-block
+      &__title
+        font-size: $main_size + 4
+      &__text
+        width: 100%
+        color: #a5a5a5
+        font-size: $main_size - 2
+
+  .technologies
+    display: flex
+    flex-wrap: wrap
+    width: 100%
+    padding: 0
+    &__item
+      font-size: $main_size - 2
+      border: 1px solid $color_highlight
+      margin: 15px 15px 0 0
+      padding: 10px 15px
+
+  .about-me
+    &__first-title
+      font-size: $main_size + 4
+
+  .skills
+    &-box
+      max-width: 400px
+      &__title
+        font-size: $main_size + 2
+      &__description
+        font-size: $main_size - 2
+
+  .contacts
+    &__title
+      font-size: $main_size + 4
+
+  .contact-me
+    font-size: $main_size - 2
+    &__link 
+      line-height: $main_size + 4
+  .contact-me__title,
+  .social-media__title
+    font-size: $main_size + 1
+
+  .social-media
+    &__link
+      margin: 0 10px 0 0
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) 
+    .brand-logo
+      &__subtitle
+        font-size: $main_size + 3
+        letter-spacing: 0.31em
+
+@media screen and (max-width: 700px)
+  .header
+    flex-direction: column
+    align-items: flex-start
+  .brand-logo
+    margin-bottom: 20px
+
+  .work-block
+    justify-content: space-between
+  
+  .work-box
+    width: 45%
+    margin: 10px 0
+    min-width: 280px
+    &:hover
+      background: rgba(155, 155, 155, 0.4)
+      &:before
+        top: -140%
+
+  .block
+    &__close
+      width: 40px
+      height: 40px
+      line-height: 40px
+      font-size: $main_size + 2
+
+  .description
+    &__link
+      font-size: $main_size - 4
+    &-block
+      &__title
+        font-size: $main_size + 4
+      &__text
+        width: 100%
+        color: #a5a5a5
+        font-size: $main_size - 2
+
+  .technologies
+    display: flex
+    flex-wrap: wrap
+    width: 100%
+    padding: 0
+    &__item
+      font-size: $main_size - 2
+      border: 1px solid $color_highlight
+      margin: 15px 15px 0 0
+      padding: 10px 15px
+
+  .about-me
+    &__first-title
+      font-size: $main_size + 4
+
+  .skills
+    &-box
+      max-width: 400px
+      &__title
+        font-size: $main_size + 2
+      &__description
+        font-size: $main_size - 2
+
+  .contacts
+    &__title
+      font-size: $main_size + 4
+
+  .contact-me
+    font-size: $main_size - 2
+    &__link 
+      line-height: $main_size + 4
+  .contact-me__title,
+  .social-media__title
+    font-size: $main_size + 1
+
+  .social-media
+    &__link
+      margin: 0 10px 0 0
+
+@media screen and (max-width: 610px)
+  .work-box
+    width: 100%
+    margin: 10px 0
+    min-width: 285px
+    &__title
+      font-size: $main_size + 2
+    &__img_wrap
+      width: 180px
+      height: 180px
+    &:before
+      top: -120%
+      width: 320px
+    &:hover
+      &:before
+        top: -120%
+  .technologies
+    &__item
+      margin: 10px 10px 0 0
+      padding: 5px 10px
+
+@media screen and (max-width: 480px)
+  .header
+    &__title
+      font-size: $main_size
+
+  .brand-logo
+    &__name
+      font-size: $main-size + 18
+      line-height: $main_size + 14
+    &__subtitle
+      font-size: $main_size
+      letter-spacing: 0.285em
+      font-weight: 100
+      color: #a5a5a5
+      margin-left: 2px
+      transform: scaleY(0.7)
+
+  .work-box
+    &__title
+      font-size: $main_size 
+    &__img_wrap
+      width: 140px
+      height: 140px
+    &:before
+      left: 15%
+
+  .block
+    padding: 20px
+
+  .description
+    &-block
+      &__title
+        font-size: $main_size + 2
+      &__text
+        font-size: $main_size - 3
+
+  .technologies
+    &__item
+      font-size: $main_size - 3
+
+  .about-me
+    &__first-title
+      font-size: $main_size + 2
+
+  .skills
+    &-box
+      max-width: 400px
+      &__img
+        width: 50px
+      &__title
+        font-size: $main_size
+      &__description
+        font-size: $main_size - 3
+
+  .contacts
+    &__title
+      font-size: $main_size + 2
+
+  .contact-me
+    font-size: $main_size - 3
+  .contact-me__title,
+  .social-media__title
+    font-size: $main_size
+
+  .social-media
+    &__img
+      width: 35px
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) 
+    .brand-logo
+      &__subtitle
+        font-size: $main_size
+        letter-spacing: 0.32em

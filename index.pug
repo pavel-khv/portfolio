@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title Pavel Khvatsik
+    link(rel="stylesheet", href="css/reset.min.css")
+    link(rel="stylesheet", href="css/styles.min.css")
+    link(rel="stylesheet", href="css/media.min.css")
+  body
+
+    include mixins.pug
+
+    .container
+      header.header.section
+        a.brand-logo(href="./")
+          p.brand-logo__name PAVEL KHVATSIK
+          p.brand-logo__subtitle FRONTEND DEVELOPER
+        p.header__title I am a beginner specializing in frontend development.
+
+      nav.nav.section 
+        ul.nav__list
+          +navMenu('MY WORKS', 'SKILLS', 'CONTACTS')
+
+      main.main.section
+        .work-block.section.tab
+          +workBox(['img/min-images/minima.jpg',   'https://pavel-khv.github.io/', 'MINIMA'],
+                   ['img/min-images/gamepro.jpg',  'https://pavel-khv.github.io/gamepro/', 'GAMEPRO'],
+                   ['img/min-images/gaming.jpg',   'https://pavel-khv.github.io/gamingtemplate/', 'X GAMES'],
+                   ['img/min-images/retro.jpg',    'https://pavel-khv.github.io/retro_cars/', 'RETRO CARS'],
+                   ['img/min-images/notebook.jpg', 'https://pavel-khv.github.io/notebook/', 'NOTEBOOK'],
+                   ['img/min-images/allybike.jpg', 'https://pavel-khv.github.io/AllyBike', 'ALLY BIKE'],
+                   ['img/min-images/tatoo.jpg',    'https://pavel-khv.github.io/tatoo/', 'DARK INK'],
+                   ['img/min-images/webcom.jpg',   'https://pavel-khv.github.io/test-webcom/', 'WEBCOM'])
+            
+        section.block.block_margin.description-block.description-block_notActive
+          span.block__close X
+          h2.description-block__title NAME WORK
+          p.description-block__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, ducimus sed est, corrupti tenetur aperiam repudiandae explicabo quasi sunt facilis aspernatur optio voluptates magni mollitia nulla sit voluptatibus cupiditate fuga.
+          ul.technologies
+
+        section.block.block_margin.about-me.tab.notActive-tab
+          span.block__close X
+          h2.about-me__first-title MY SKILLS
+          .skills
+            +skills(['data', 'HTML + CSS', 'Using pre-processors SASS and Pug'],
+                    ['resize', 'Adaptive Layout', 'Adaptive layout using flexbox and media queries'],
+                    ['binary-data', 'Cross-Browser', 'Optimal site display in all modern browsers'],
+                    ['code', 'JavaScript', 'Basic knowledge of JavaScript/jQuery. Using Gulp to build a project'],
+                    ['browser', 'Validation', 'Compliance to W3C standards'],
+                    ['software', 'Photoshop', 'Using photoshop to work with layouts'])
+                
+        section.block.block_margin.contacts.tab.notActive-tab
+          span.block__close X
+          h2.contacts__title CONTACTS
+          .contact-me
+            p.contact-me__title You can contact me ⬇
+            span.contact-me__phone Phone: 
+              a.contact-me__link(href="tel:+375292263607")   +375 (29) 226-36-07
+            span.contact-me__email E-mail: 
+              a.contact-me__link(href="mailto:pavel.khv96@mail.ru")  pavel.khv96@mail.ru
+          .social-media
+            p.social-media__title And also you can find me in social networks ⬇
+            +social-media(['https://vk.com/id64520413', 'vk'],
+                          ['https://www.instagram.com', 'instagram'],
+                          ['https://t.me/PavelKhv', 'telegram'],
+                          ['https://github.com/pavel-khv', 'github'],
+                          ['https://www.linkedin.com/in/pavel-khv/', 'linkedin'])
+    script(src="js/description.js")
+    script(src='js/common.min.js')
+
+          
+
+
+
+          
